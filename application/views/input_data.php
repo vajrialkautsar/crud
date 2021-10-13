@@ -5,6 +5,7 @@
 <body>
         <center>
             <h1>Input Data Mahasiswa</h1>
+            <label style="color:#FF0000"><?php echo validation_errors(); ?></label>
         </center>
         <form action="<?php echo base_url(). 'index.php/kampus/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
             <table style="margin:20px auto;">
@@ -25,6 +26,10 @@
                     <td><input type="text" name="pekerjaan"></td>
                 </tr>
                 <tr>
+                    <td>Upload Foto</td>
+                    <td><input type="file" name="foto"></td>
+                 </tr>
+                <tr>
                     <td></td>
                     <td><input type="submit" value="Tambah"> <input type="reset" value="Batal"> <?php echo anchor('kampus/index','<input type=button value=Kembali>'); ?></td>
                 </tr>
@@ -32,13 +37,3 @@
     </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
